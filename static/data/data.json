@@ -1,0 +1,168 @@
+{
+  "familyData": [
+    {
+      "avatar": "/static/images/avatar-1.png",
+      "name": "Fredelito Madigal",
+      "relationship": "Father",
+      "text": "He's my father. A hardworking man, who taught me how to be a good person. He is a great person, despite tiredness in job he keeps mingling to other people and staying positive all the time."
+    },
+    {
+      "avatar": "/static/images/avatar-2.png",
+      "name": "Daisybel Tolentino",
+      "relationship": "Mother",
+      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    },
+    {
+      "avatar": "/static/images/avatar-3.png",
+      "name": "Jeffrey Tolentino",
+      "relationship": "Step-Father",
+      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    },
+    {
+      "avatar": "/static/images/avatar-4.png",
+      "name": "Jade Atyla L. Madigal",
+      "relationship": "Sister",
+      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    },
+    {
+      "avatar": "/static/images/avatar-4.png",
+      "name": "Reena Kaye L. Madigal",
+      "relationship": "Sister",
+      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    },
+    {
+      "avatar": "/static/images/avatar-4.png",
+      "name": "Keed Nahaleel L. Madigal",
+      "relationship": "Brother",
+      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    },
+    {
+      "avatar": "/static/images/avatar-4.png",
+      "name": "Kathleen Joy L. Madigal",
+      "relationship": "Sister",
+      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    },
+    {
+      "avatar": "/static/images/avatar-4.png",
+      "name": "Scxian Ely L. Madigal",
+      "relationship": "Sister",
+      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    }
+  ],
+  "hobbiesData": [
+    {
+      "icon": "/static/images/icon-design.svg",
+      "title": "Web Design",
+      "text": "Effiently manage and organize the design process."
+    },
+    {
+      "icon": "/static/images/icon-design.svg",
+      "title": "Programming",
+      "text": "Engaged programming skills in Backend and Frontend development."
+    },
+    {
+      "icon": "/static/images/icon-design.svg",
+      "title": "Music",
+      "text": "Playing guitar and writing songs are my hobbies."
+    },
+    {
+      "icon": "/static/images/icon-design.svg",
+      "title": "Digital Art",
+      "text": "Art is form of expression and ideas that can't be expressed in words."
+    }
+  ],
+  "personalData": [
+    {
+      "category": "Birth Date",
+      "data": "April 7, 2004"
+    },
+    {
+      "category": "Address",
+      "data": "082 Genai Latero San Nicolas 3 Bacoor Cavite"
+    },
+    {
+      "category": "Course",
+      "data": "Bachelor of Science in Computer Science"
+    },
+    {
+      "category": "School",
+      "data": "Cavite State University - Bacoor Campus"
+    }
+  ],
+  "skillSet": [
+    {
+      "title": "Soft Skills",
+      "skills": [
+        {
+          "data": "Basic Math Skills",
+          "desc": "Ability to perform basic arithmetic and calculations."
+        },
+        {
+          "data": "Adaptive Skills",
+          "desc": "Quickly adjust to new situations and environments."
+        },
+        {
+          "data": "Communication Skills",
+          "desc": "Effectively convey ideas and information."
+        },
+        {
+          "data": "Time Management",
+          "desc": "Efficiently organize and prioritize tasks."
+        },
+        {
+          "data": "Problem-Solving Skills",
+          "desc": "Identify issues and find effective solutions."
+        },
+        {
+          "data": "Teamwork",
+          "desc": "Work well and collaborate with others."
+        },
+        {
+          "data": "Customer Service",
+          "desc": "Assist and support customers professionally."
+        },
+        {
+          "data": "Leadership Skills",
+          "desc": "Guide and motivate a group to achieve goals."
+        }
+      ]
+    },
+    {
+      "title": "Technical Skills",
+      "skills": [
+        {
+          "data": "Programming",
+          "desc": "Write and understand code in various languages."
+        },
+        {
+          "data": "Digital Designs",
+          "desc": "Create graphics and visual content digitally."
+        },
+        {
+          "data": "Web Development",
+          "desc": "Build and maintain websites and web apps."
+        },
+        {
+          "data": "Game Development",
+          "desc": "Design and develop interactive games."
+        },
+        { "data": "Video Editing", "desc": "Edit and produce video content." },
+        {
+          "data": "Database Management",
+          "desc": "Organize and manage data using databases."
+        },
+        {
+          "data": "Server Hosting",
+          "desc": "Set up and maintain servers for applications."
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "category": "Web Development",
+      "techstack": ["HTML", "CSS", "JavaScript"]
+    }
+  ]
+}
