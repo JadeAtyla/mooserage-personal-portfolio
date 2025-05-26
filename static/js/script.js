@@ -3,6 +3,10 @@
 // element toggle function
 const elementToggleFunc = function (elem) {
   elem.classList.toggle("active");
+
+  console.log(
+    `Element ${elem.classList.contains("active") ? "activated" : "deactivated"}`
+  );
 };
 
 // sidebar variables
@@ -58,7 +62,7 @@ overlay.addEventListener("click", testimonialsModalFunc);
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
+const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 select.addEventListener("click", function () {
@@ -82,13 +86,27 @@ const filterFunc = function (selectedValue) {
   for (let i = 0; i < filterItems.length; i++) {
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
+    } else if (
+      selectedValue === filterItems[i].dataset.category.toLowerCase()
+    ) {
       filterItems[i].classList.add("active");
     } else {
       filterItems[i].classList.remove("active");
     }
   }
 };
+
+// const filterFunc = function (selectedValue) {
+//   for (let i = 0; i < filterItems.length; i++) {
+//     if (selectedValue === "all") {
+//       filterItems[i].classList.add("active");
+//     } else if (selectedValue === filterItems[i].dataset.category) {
+//       filterItems[i].classList.add("active");
+//     } else {
+//       filterItems[i].classList.remove("active");
+//     }
+//   }
+// };
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
@@ -141,3 +159,33 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+const indent = document.getElementsByClassName("indent");
+let filler = "";
+for (let i = 0; i < 5; i++) {
+  filler += "&nbsp;";
+}
+
+for (let i = 0; i < indent.length; i++) {
+  indent[i].innerHTML = filler + indent[i].innerHTML;
+}
+
+function downloadResume() {
+  const url = "static/pdf/Jade Atyla Madigal - Resume.pdf"; // Adjust the path as needed
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "Jade Atyla Madigal - Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var modalDate = document.querySelector(".modal-date");
+  if (modalDate) {
+    // Example: show today's date in "DD Month, YYYY" format
+    var now = new Date();
+    var options = { year: "numeric", month: "long", day: "numeric" };
+    modalDate.textContent = now.toLocaleDateString("en-US", options);
+  }
+});

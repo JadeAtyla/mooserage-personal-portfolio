@@ -1,90 +1,88 @@
 {
   "familyData": [
     {
-      "avatar": "/static/images/avatar-1.png",
+      "avatar": "/static/images/avatar-4.png",
       "name": "Fredelito Madigal",
       "relationship": "Father",
-      "text": "He's my father. A hardworking man, who taught me how to be a good person. He is a great person, despite tiredness in job he keeps mingling to other people and staying positive all the time."
+      "text": "My father was once driver, security guard, and a small businessman. He does all this to provide for our family. He's one of my idol."
     },
     {
       "avatar": "/static/images/avatar-2.png",
       "name": "Daisybel Tolentino",
       "relationship": "Mother",
-      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+      "text": "My mother was once a housekeeping staff. She is very hardworking in both fields, from motherhood to work. She is a very loving and caring mother. She is my inspiration in life."
+    },
+    {
+      "avatar": "/static/images/avatar-1.png",
+      "name": "Jeffrey Tolentino",
+      "relationship": "Step-Father",
+      "text": "He's my step-father, he really does provide for the family just what he promised to my mother. Really grateful to have him supporting the faimly."
     },
     {
       "avatar": "/static/images/avatar-3.png",
-      "name": "Jeffrey Tolentino",
-      "relationship": "Step-Father",
-      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
-    },
-    {
-      "avatar": "/static/images/avatar-4.png",
-      "name": "Jade Atyla L. Madigal",
-      "relationship": "Sister",
-      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
-    },
-    {
-      "avatar": "/static/images/avatar-4.png",
       "name": "Reena Kaye L. Madigal",
       "relationship": "Sister",
-      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+      "text": "Second child of my biological parents. She's good at cooking and designing. As she's just one year younger than me, we share couple of ideals in life."
     },
     {
-      "avatar": "/static/images/avatar-4.png",
+      "avatar": "/static/images/avatar-1.png",
       "name": "Keed Nahaleel L. Madigal",
       "relationship": "Brother",
-      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+      "text": "Third child of my biological parents. He's a very playful and energetic kid. He loves to play games and watch anime."
     },
     {
-      "avatar": "/static/images/avatar-4.png",
+      "avatar": "/static/images/avatar-3.png",
       "name": "Kathleen Joy L. Madigal",
       "relationship": "Sister",
-      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+      "text": "Fourth child of my biological parents and the last child for my father's side. She's a very smart and talented kid. She loves her church duty and also to sing."
     },
     {
-      "avatar": "/static/images/avatar-4.png",
+      "avatar": "/static/images/avatar-3.png",
       "name": "Scxian Ely L. Madigal",
       "relationship": "Sister",
-      "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+      "text": "Last child of my mother and first child of my step-father. Right now, she's still a kid and loves to play with her toys. She's very cute and adorable."
     }
   ],
   "hobbiesData": [
     {
-      "icon": "/static/images/icon-design.svg",
+      "icon": "/static/images/web_design.svg",
       "title": "Web Design",
       "text": "Effiently manage and organize the design process."
     },
     {
-      "icon": "/static/images/icon-design.svg",
+      "icon": "/static/images/programming.svg",
       "title": "Programming",
       "text": "Engaged programming skills in Backend and Frontend development."
     },
     {
-      "icon": "/static/images/icon-design.svg",
+      "icon": "/static/images/music.svg",
       "title": "Music",
       "text": "Playing guitar and writing songs are my hobbies."
     },
     {
-      "icon": "/static/images/icon-design.svg",
+      "icon": "/static/images/digital_arts.svg",
       "title": "Digital Art",
       "text": "Art is form of expression and ideas that can't be expressed in words."
     }
   ],
   "personalData": [
     {
+      "icon": "calendar-outline",
       "category": "Birth Date",
       "data": "April 7, 2004"
     },
     {
+      "icon": "pizza-outline",
       "category": "Address",
       "data": "082 Genai Latero San Nicolas 3 Bacoor Cavite"
     },
     {
+      "icon": "bookmarks-outline",
       "category": "Course",
       "data": "Bachelor of Science in Computer Science"
     },
     {
+      "icon": "flag-outline",
       "category": "School",
       "data": "Cavite State University - Bacoor Campus"
     }
@@ -92,6 +90,7 @@
   "skillSet": [
     {
       "title": "Soft Skills",
+      "icon": "person-outline",
       "skills": [
         {
           "data": "Basic Math Skills",
@@ -129,40 +128,196 @@
     },
     {
       "title": "Technical Skills",
+      "icon": "settings-outline",
       "skills": [
         {
           "data": "Programming",
-          "desc": "Write and understand code in various languages."
+          "desc": "Write and understand code in various languages.",
+          "skillsStack": ["Java", "Python", "JavaScript", "PHP"]
+        },
+        {
+          "data": "Backend Development",
+          "desc": "Build and maintain server-side applications.",
+          "skillsStack": ["Flask", "Django", "NodeJS", "ExpressJS"]
+        },
+        {
+          "data": "Frontend Development",
+          "desc": "Create user interfaces and client-side applications.",
+          "skillsStack": ["ReactJS", "HTML", "CSS", "Tailwind", "Bootstrap"]
         },
         {
           "data": "Digital Designs",
-          "desc": "Create graphics and visual content digitally."
-        },
-        {
-          "data": "Web Development",
-          "desc": "Build and maintain websites and web apps."
+          "desc": "Create graphics and visual content digitally.",
+          "skillsStack": ["Figma", "Canva", "Inkscape", "AdobePhotoshop"]
         },
         {
           "data": "Game Development",
-          "desc": "Design and develop interactive games."
+          "desc": "Design and develop interactive games.",
+          "skillsStack": ["Godot"]
         },
-        { "data": "Video Editing", "desc": "Edit and produce video content." },
+        {
+          "data": "Video Editing",
+          "desc": "Edit and produce video content.",
+          "skillsStack": ["CapCut"]
+        },
         {
           "data": "Database Management",
-          "desc": "Organize and manage data using databases."
+          "desc": "Organize and manage data using databases.",
+          "skillsStack": ["MySQL", "SQLite3", "MongoDB"]
         },
         {
           "data": "Server Hosting",
-          "desc": "Set up and maintain servers for applications."
+          "desc": "Set up and maintain servers for applications.",
+          "skillsStack": ["Vercel", "Railway"]
+        },
+        {
+          "data": "Microsoft Office",
+          "desc": "Proficient in using Microsoft Office applications.",
+          "skillsStack": ["Word", "Excel", "PowerPoint"]
         }
       ]
     }
   ],
-  "projects": [
+  "projectsData": [
     {
-      "title": "Portfolio Website",
-      "category": "Web Development",
-      "techstack": ["HTML", "CSS", "JavaScript"]
+      "image": "todo_list_img.jpg",
+      "title": "TO DO List System",
+      "category": "Web Application",
+      "techstack": ["Flask", "HTML", "Bootstrap", "JavaScript", "SQLite3"],
+      "liveDemo": "https://to-do-list-system.vercel.app/",
+      "github": "https://github.com/JadeAtyla/To-Do-List-System"
+    },
+    {
+      "image": "enrollment_system_img.jpg",
+      "title": "Enrollment System",
+      "category": "Web Application",
+      "techstack": [
+        "Django",
+        "React.js",
+        "TailwindCSS",
+        "Python",
+        "JavaScript",
+        "MySQL"
+      ],
+      "github": "https://github.com/JadeAtyla/Enrollment-System"
+    },
+    {
+      "image": "checklist_img.jpg",
+      "title": "Checklist",
+      "category": "Web Application",
+      "techstack": ["Django", "TailwindCSS", "HTML", "Python", "JavaScript"],
+      "github": "https://github.com/JadeAtyla/Checklist"
+    },
+    {
+      "image": "jecati_img.jpg",
+      "title": "Jecati Construction Services",
+      "category": "Websites",
+      "techstack": ["Django", "TailwindCSS", "HTML", "Python", "JavaScript"],
+      "liveDemo": "https://jecati-construction-services.vercel.app/",
+      "github": "https://github.com/JadeAtyla/JecatiConstructionServices"
+    }
+  ],
+  "certificationData": [
+    {
+      "title": "Python for Everybody Specialization",
+      "issuer": "Coursera",
+      "date": "2023-10-01"
+    }
+  ],
+  "schoolsData": [
+    {
+      "name": "Moonwalk Elementary School",
+      "level": "Elementary",
+      "startYear": "2010",
+      "endYear": "2016"
+    },
+    {
+      "name": "City of Bacoor National High School",
+      "level": "Junior High School",
+      "startYear": "2016",
+      "endYear": "2020"
+    },
+    {
+      "name": "Southeast Asia Institute of Trade and Technology",
+      "specification": "Science, Technology, Engineering and Mathematics",
+      "level": "Senior High School",
+      "startYear": "2020",
+      "endYear": "2022"
+    },
+    {
+      "name": "Cavite State University - Bacoor Campus",
+      "specification": "Bachelor of Science in Computer Science",
+      "level": "College",
+      "startYear": "2022",
+      "endYear": "2026"
+    }
+  ],
+  "experiencesData": [
+    {
+      "company": "Fortuner Sercurity Agency Inc.",
+      "position": "On-call Laiason",
+      "startYear": "November 2022",
+      "endYear": "January 2023",
+      "description": "Assisted in various tasks such as collection of documents and filing of reports."
+    },
+    {
+      "company": "Freelance",
+      "position": "Visual Graphics",
+      "startYear": "June 2024",
+      "endYear": "July 2024",
+      "description": "Created visual graphics from client requests, including logos, and poster. Utilized tools like Figma to deliver high-quality designs."
+    }
+  ],
+  "challengesData": [
+    {
+      "date": "15 Dec",
+      "title": "Problem",
+      "category": "Challenge",
+      "description": "Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem"
+    },
+    {
+      "date": "15 Dec",
+      "title": "Problem",
+      "category": "Challenge",
+      "description": "Problem"
+    },
+    {
+      "date": "15 Dec",
+      "title": "Problem",
+      "category": "Challenge",
+      "description": "Problem"
+    },
+    {
+      "date": "15 Dec",
+      "title": "Problem",
+      "category": "Challenge",
+      "description": "Problem"
+    }
+  ],
+  "plansData": [
+    {
+      "date": "15 Dec 2022",
+      "title": "Plans",
+      "category": "Long Term Plan",
+      "description": "Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem"
+    },
+    {
+      "date": "15 Dec 2022",
+      "title": "Plans",
+      "category": "Long Term Plan",
+      "description": "Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem"
+    },
+    {
+      "date": "15 Dec 2022",
+      "title": "Plans",
+      "category": "Long Term Plan",
+      "description": "Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem"
+    },
+    {
+      "date": "15 Dec 2022",
+      "title": "Plans",
+      "category": "Long Term Plan",
+      "description": "Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem"
     }
   ]
 }

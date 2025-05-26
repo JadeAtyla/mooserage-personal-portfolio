@@ -35,6 +35,23 @@
   </head>
 
   <body>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %}
+    <div id="flash-messages">
+      {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+    <script>
+      setTimeout(function () {
+        var flash = document.getElementById("flash-messages");
+        if (flash) {
+          flash.style.display = "none";
+        }
+      }, 5000);
+    </script>
+    {% endif %} {% endwith %}
+
     <!--
     - #MAIN
   -->
@@ -48,7 +65,7 @@
         <div class="sidebar-info">
           <figure class="avatar-box">
             <img
-              src="{{ url_for('static', filename='images/my-avatar.png') }}"
+              src="{{ url_for('static', filename='images/jade_hero_img.png') }}"
               alt="Richard hanrick"
               width="80"
             />
@@ -184,15 +201,15 @@
             </li>
 
             <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Challenges</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Plans</button>
+            </li>
+
+            <li class="navbar-item">
               <button class="navbar-link" data-nav-link>Resume</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Home</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Blog</button>
             </li>
 
             <li class="navbar-item">
@@ -211,28 +228,35 @@
           </header>
 
           <section class="about-text">
-            <p>
-              I'm Creative Director and UI/UX Designer from Sydney, Australia,
-              working in web development and print media. I enjoy turning
-              complex problems into simple, beautiful and intuitive designs.
+            <p class="indent">
+              Hi! I’m a 3rd-year BS Computer Science student who is passionate
+              about learning through practical experience. I believe that
+              building projects is the best way to gain real-world skills and
+              deepen my understanding of programming concepts.
+            </p>
+            <p class="indent">
+              I have experience coding in Java, JavaScript, HTML, CSS, PHP, and
+              Python, and I enjoy working with frameworks and libraries like
+              Django, Flask, React.js, and Node.js. I’m also familiar with
+              managing databases such as SQLite3, MySQL, MongoDB, and MariaDB.
             </p>
 
-            <p>
-              My job is to build your website so that it is functional and
-              user-friendly but at the same time attractive. Moreover, I add
-              personal touch to your product and make sure that is eye-catching
-              and easy to use. My aim is to bring across your message and
-              identity in the most creative way. I created web design for many
-              famous brand companies.
+            <p class="indent">
+              Aside from coding, I’m interested in exploring different
+              technologies and improving my problem-solving abilities. I’m
+              always eager to take on new challenges and collaborate on projects
+              that push me to grow as a developer. My goal is to continuously
+              expand my knowledge and apply what I learn to create meaningful
+              and efficient software solutions.
             </p>
           </section>
           <div class="separator"></div>
-          <h3 class="h3 personal-info-title">Know More About Me?</h3>
+          <h3 class="h3 personal-info-title">My Information</h3>
           <ul class="contacts-list">
             {% for me in personal %}
             <li class="contact-item">
               <div class="icon-box">
-                <ion-icon name="mail-outline"></ion-icon>
+                <ion-icon name="{{ me.icon }}"></ion-icon>
               </div>
 
               <div class="contact-info">
@@ -258,7 +282,7 @@
               <li class="service-item">
                 <div class="service-icon-box">
                   <img
-                    src="{{ hobby.icon}}"
+                    src="{{ hobby.icon }}"
                     alt="{{ hobby.title }} Icon"
                     width="40"
                   />
@@ -343,88 +367,21 @@
               <div class="modal-content">
                 <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
 
-                <time datetime="2021-06-14">14 June, 2021</time>
+                <time class="modal-date"><!--  --></time>
                 <div class="info-content">
-                  <p class="enclosed" data-modal-relationship>Deceased</p>
+                  <p class="enclosed" data-modal-relationship>
+                    <!-- relationship -->
+                  </p>
                 </div>
 
                 <div data-modal-text>
                   <p>
-                    Richard was hired to create a corporate identity. We were
-                    very pleased with the work done. She has a lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum
-                    dolor sit amet, ullamcous cididt consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels
-                    dolore magnarels alia.
+                    <!-- text information -->
                   </p>
                 </div>
               </div>
             </section>
           </div>
-
-          <!--
-          - clients
-        -->
-
-          <section class="clients">
-            <h3 class="h3 clients-title">Clients</h3>
-
-            <ul class="clients-list has-scrollbar">
-              <li class="clients-item">
-                <a href="#">
-                  <img
-                    src="{{ url_for('static', filename='images/logo-1-color.png') }}"
-                    alt="client logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img
-                    src="{{ url_for('static', filename='images/logo-2-color.png') }}"
-                    alt="client logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img
-                    src="{{ url_for('static', filename='images/logo-3-color.png') }}"
-                    alt="client logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img
-                    src="{{ url_for('static', filename='images/logo-4-color.png') }}"
-                    alt="client logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img
-                    src="{{ url_for('static', filename='images/logo-5-color.png') }}"
-                    alt="client logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img
-                    src="{{ url_for('static', filename='images/logo-6-color.png') }}"
-                    alt="client logo"
-                  />
-                </a>
-              </li>
-            </ul>
-          </section>
         </article>
         <!--
         - #SKILLS
@@ -438,7 +395,7 @@
           <section class="timeline">
             <div class="title-wrapper">
               <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
+                <ion-icon name="{{ skill.icon }}"></ion-icon>
               </div>
 
               <h3 class="h3">{{ skill.title }}</h3>
@@ -452,12 +409,62 @@
                 <!-- <span>2007 — 2008</span> -->
 
                 <p class="timeline-text">{{ s.desc }}</p>
+                {% if s.skillsStack %}
+                <div class="contact-social-row">
+                  {% for stack in s.skillsStack %}
+                  <div class="icon-box">
+                    <img
+                      src="{{ url_for('static', filename='images/' + stack|lower + '.svg') }}"
+                      alt="{{ stack }} Icon"
+                      width="30"
+                    />
+                  </div>
+                  {% endfor %}
+                </div>
+                {% endif %}
               </li>
               {% endfor %}
             </ol>
           </section>
           <div class="separator"></div>
           {% endfor %}
+          <div class="seperator"></div>
+          <h3 class="h3 skills-title">Certificates</h3>
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="{{ url_for('static', filename='images/blog-1.jpg') }}"
+                      alt="Design conferences in 2022"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Design conferences in 2022
+                    </h3>
+
+                    <p class="blog-text">
+                      Veritatis et quasi architecto beatae vitae dicta sunt,
+                      explicabo.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <div class="separator"></div>
           <section class="skill">
             <h3 class="h3 skills-title">My skills</h3>
 
@@ -525,7 +532,7 @@
               </li>
 
               <li class="filter-item">
-                <button data-filter-btn>Web design</button>
+                <button data-filter-btn>Websites</button>
               </li>
 
               <li class="filter-item">
@@ -533,13 +540,13 @@
               </li>
 
               <li class="filter-item">
-                <button data-filter-btn>Web development</button>
+                <button data-filter-btn>Web Application</button>
               </li>
             </ul>
 
             <div class="filter-select-box">
               <button class="filter-select" data-select>
-                <div class="select-value" data-selecct-value>
+                <div class="select-value" data-select-value>
                   Select category
                 </div>
 
@@ -554,7 +561,7 @@
                 </li>
 
                 <li class="select-item">
-                  <button data-select-item>Web design</button>
+                  <button data-select-item>Websites</button>
                 </li>
 
                 <li class="select-item">
@@ -562,226 +569,125 @@
                 </li>
 
                 <li class="select-item">
-                  <button data-select-item>Web development</button>
+                  <button data-select-item>Web Application</button>
                 </li>
               </ul>
             </div>
 
             <ul class="project-list">
+              {% for project in projects %}
               <li
                 class="project-item active"
                 data-filter-item
-                data-category="web development"
+                data-category="{{ project.category }}"
               >
                 <a href="#">
                   <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
+                    <div class="project-row">
+                      <div class="project-item-icon-box">
+                        {% if project.liveDemo %}
+                        <ion-icon
+                          class="link-icon"
+                          name="play-circle-outline"
+                          onclick="window.open('{{ project.liveDemo }}', '_blank')"
+                        ></ion-icon>
+                        {% endif %} {% if project.github %}
+                        <ion-icon
+                          class="link-icon"
+                          name="logo-github"
+                          onclick="window.open('{{ project.github }}', '_blank')"
+                        ></ion-icon>
+                        {% endif %}
+                      </div>
                     </div>
 
                     <img
-                      src="{{ url_for('static', filename='images/project-1.jpg') }}"
+                      src="{{ url_for('static', filename='images/' + project.image) }}"
                       alt="finance"
                       loading="lazy"
                     />
                   </figure>
 
-                  <h3 class="project-title">Finance</h3>
-                  <p class="project-category">Web development</p>
+                  <h3 class="project-title">{{ project.title }}</h3>
+                  <p class="project-category">{{ project.category }}</p>
                 </a>
               </li>
+              {% endfor %}
+            </ul>
+          </section>
+        </article>
 
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
+        <!--
+        - #CHALLENGES
+      -->
+
+        <article class="challenges" data-page="challenges">
+          <header>
+            <h2 class="h2 article-title">Challenges & Learnings</h2>
+            <div class="timeline2">
+              <div class="body">
+                {% for i in range(challenges|length) %}
+                <div
+                  class="container {% if loop.index0 % 2 == 0 %}left{% else %}right{% endif %}"
+                >
+                  <div class="date">{{challenges[i].date}}</div>
+                  <i class="icon fa fa-home"></i>
+                  <div class="content">
+                    <div class="info-content contact-social-row">
+                      <p class="title">{{challenges[i].category}}</p>
+                      <h2>{{challenges[i].title}}</h2>
                     </div>
+                    <p class="indent desc">{{challenges[i].description}}</p>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </header>
+        </article>
 
+        <!--
+        - #PLANS
+      -->
+
+        <article class="plans" data-page="plans">
+          <header>
+            <h2 class="h2 article-title">Plans</h2>
+          </header>
+
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              {% for plan in plans %}
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
                     <img
-                      src="{{ url_for('static', filename='images/project-2.png') }}"
-                      alt="orizon"
+                      src="{{ url_for('static', filename='images/blog-1.jpg') }}"
+                      alt="Design conferences in 2022"
                       loading="lazy"
                     />
                   </figure>
 
-                  <h3 class="project-title">Orizon</h3>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">{{plan.category}}</p>
 
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
+                      <span class="dot"></span>
 
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
+                      <time datetime="2022-02-23">{{plan.date}}</time>
                     </div>
 
-                    <img
-                      src="{{ url_for('static', filename='images/project-3.jpg') }}"
-                      alt="fundo"
-                      loading="lazy"
-                    />
-                  </figure>
+                    <h3 class="h3 blog-item-title">
+                      {{plan.title}}
+                    </h3>
 
-                  <h3 class="project-title">Fundo</h3>
-
-                  <p class="project-category">Web design</p>
+                    <p class="blog-text">
+                      {{plan.description}}
+                    </p>
+                  </div>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="applications"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="{{ url_for('static', filename='images/project-4.png') }}"
-                      alt="brawlhalla"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Brawlhalla</h3>
-
-                  <p class="project-category">Applications</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="{{ url_for('static', filename='images/project-5.png') }}"
-                      alt="dsm."
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">DSM.</h3>
-
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="{{ url_for('static', filename='images/project-6.png') }}"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">MetaSpark</h3>
-
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="{{ url_for('static', filename='images/project-7.png') }}"
-                      alt="summary"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Summary</h3>
-
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="applications"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="{{ url_for('static', filename='images/project-8.jpg') }}"
-                      alt="task manager"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Task Manager</h3>
-
-                  <p class="project-category">Applications</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="{{ url_for('static', filename='images/project-9.png') }}"
-                      alt="arrival"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Arrival</h3>
-
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
+              {% endfor %}
             </ul>
           </section>
         </article>
@@ -805,44 +711,18 @@
             </div>
 
             <ol class="timeline-list">
+              {% for school in schools %}
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  University school of the arts
-                </h4>
+                <h4 class="h4 timeline-item-title">{{ school.name }}</h4>
 
-                <span>2007 — 2008</span>
+                <span>{{ school.startYear }} — {{ school.endYear }}</span>
 
                 <p class="timeline-text">
-                  Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-                  delenit atque corrupti, quos dolores et quas molestias
-                  exceptur.
+                  <em>{{ school.level }}</em><br />
+                  {{ school.specification }}
                 </p>
               </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">New york academy of art</h4>
-
-                <span>2006 — 2007</span>
-
-                <p class="timeline-text">
-                  Ratione voluptatem sequi nesciunt, facere quisquams facere
-                  menda ossimus, omnis voluptas assumenda est omnis..
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  High school of art and design
-                </h4>
-
-                <span>2002 — 2004</span>
-
-                <p class="timeline-text">
-                  Duis aute irure dolor in reprehenderit in voluptate, quila
-                  voluptas mag odit aut fugit, sed consequuntur magni dolores
-                  eos.
-                </p>
-              </li>
+              {% endfor %}
             </ol>
           </section>
 
@@ -856,288 +736,54 @@
             </div>
 
             <ol class="timeline-list">
+              {% for experience in experiences %}
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Creative director</h4>
+                <h4 class="h4 timeline-item-title">
+                  {{ experience.position }}
+                </h4>
 
-                <span>2015 — Present</span>
+                <span
+                  >{{ experience.startYear }} — {{ experience.endYear }}</span
+                >
 
                 <p class="timeline-text">
-                  Nemo enim ipsam voluptatem blanditiis praesentium voluptum
-                  delenit atque corrupti, quos dolores et qvuas molestias
-                  exceptur.
+                  <em>{{ experience.company }}</em><br />
+                  {{ experience.description }}
                 </p>
               </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Art director</h4>
-
-                <span>2013 — 2015</span>
-
-                <p class="timeline-text">
-                  Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-                  delenit atque corrupti, quos dolores et quas molestias
-                  exceptur.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Web designer</h4>
-
-                <span>2010 — 2013</span>
-
-                <p class="timeline-text">
-                  Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-                  delenit atque corrupti, quos dolores et quas molestias
-                  exceptur.
-                </p>
-              </li>
+              {% endfor %}
             </ol>
           </section>
+          <iframe
+            src="{{url_for('static', filename='pdf/Jade Atyla Madigal - Resume.pdf')}}"
+            width="100%"
+            height="1000px"
+            style="border: none"
+          ></iframe>
 
           <section class="skill">
-            <h3 class="h3 skills-title">My skills</h3>
+            <button class="form-btn" onclick="downloadResume()">
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Download Resume</span>
+            </button>
 
-            <ul class="skills-list content-card">
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Web design</h5>
-                  <data value="80">80%</data>
-                </div>
+            <!-- <div class="seperator"></div>
+            
+            <div class="contact-social-row">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <a
+              href="{{url_for('static', filename='pdf/Jade Atyla Madigal - Resume.pdf')}}"
+              target="_blank"
+              >
+              <h3 class="h3 skills-title">
+                Here's My Resume(Click Me!)
+              </h3>
+            </a>
+            
 
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Graphic design</h5>
-                  <data value="70">70%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 70%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Branding</h5>
-                  <data value="90">90%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 90%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">WordPress</h5>
-                  <data value="50">50%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 50%"></div>
-                </div>
-              </li>
-            </ul>
-          </section>
-        </article>
-
-        <!--
-        - #BLOG
-      -->
-
-        <article class="blog" data-page="blog">
-          <header>
-            <h2 class="h2 article-title">Blog</h2>
-          </header>
-
-          <section class="blog-posts">
-            <ul class="blog-posts-list">
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="{{ url_for('static', filename='images/blog-1.jpg') }}"
-                      alt="Design conferences in 2022"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      Design conferences in 2022
-                    </h3>
-
-                    <p class="blog-text">
-                      Veritatis et quasi architecto beatae vitae dicta sunt,
-                      explicabo.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="{{ url_for('static', filename='images/blog-2.jpg') }}"
-                      alt="Best fonts every designer"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      Best fonts every designer
-                    </h3>
-
-                    <p class="blog-text">
-                      Sed ut perspiciatis, nam libero tempore, cum soluta nobis
-                      est eligendi.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="{{ url_for('static', filename='images/blog-3.jpg') }}"
-                      alt="Design digest #80"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                    <p class="blog-text">
-                      Excepteur sint occaecat cupidatat no proident, quis
-                      nostrum exercitationem ullam corporis suscipit.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="{{ url_for('static', filename='images/blog-4.jpg') }}"
-                      alt="UI interactions of the week"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      UI interactions of the week
-                    </h3>
-
-                    <p class="blog-text">
-                      Enim ad minim veniam, consectetur adipiscing elit, quis
-                      nostrud exercitation ullamco laboris nisi.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="{{ url_for('static', filename='images/blog-5.jpg') }}"
-                      alt="The forgotten art of spacing"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      The forgotten art of spacing
-                    </h3>
-
-                    <p class="blog-text">
-                      Maxime placeat, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="{{ url_for('static', filename='images/blog-6.jpg') }}"
-                      alt="Design digest #79"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                    <p class="blog-text">
-                      Optio cumque nihil impedit uo minus quod maxime placeat,
-                      velit esse cillum.
-                    </p>
-                  </div>
-                </a>
-              </li>
-            </ul>
+            </div> -->
           </section>
         </article>
 
@@ -1149,22 +795,85 @@
           <header>
             <h2 class="h2 article-title">Contact</h2>
           </header>
-
+          <!-- <h3 class="h3 form-title">Address</h3> -->
           <section class="mapbox" data-mapbox>
             <figure>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-                width="400"
-                height="300"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864.215399563189!2d120.98703885131225!3d14.41474297930368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1716161c585%3A0x51fd4cce99a5b667!2sGENAI%20ASSOCIATION!5e0!3m2!1sen!2sph!4v1747977053967!5m2!1sen!2sph"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
                 loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
             </figure>
           </section>
-
+          <div class="separator"></div>
+          <h3 class="h3 form-title">Social Links</h3>
+          <div class="contact-social-row">
+            <a
+              class="icon-box"
+              title="Facebook"
+              href="https://www.facebook.com/jadeatylam"
+              target="_blank"
+            >
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a
+              class="icon-box"
+              title="Telegram"
+              href="https://t.me/jamadigal"
+              target="_blank"
+            >
+              <ion-icon name="paper-plane"></ion-icon>
+            </a>
+            <a
+              class="icon-box"
+              title="Instagram"
+              href="https://www.instagram.com/jeydweirdough/"
+              target="_blank"
+            >
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a
+              class="icon-box"
+              title="LinkedIn"
+              href="https://www.linkedin.com/in/madigal-jade-atyla-l-14803835a/"
+              target="_blank"
+            >
+              <ion-icon name="logo-linkedIn"></ion-icon>
+            </a>
+            <a
+              class="icon-box"
+              title="Github"
+              href="https://github.com/JadeAtyla"
+              target="_blank"
+            >
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+            <a
+              class="icon-box"
+              title="Discord"
+              href="https://discord.com/users/1118727103228149770"
+              target="_blank"
+            >
+              <ion-icon name="logo-discord"></ion-icon>
+            </a>
+            <a
+              class="icon-box"
+              title="Atyla Personal Portfolio"
+              href="https://atyla-personal-portfolio.vercel.app/"
+              target="_blank"
+            >
+              <ion-icon name="browsers-outline"></ion-icon>
+            </a>
+          </div>
+          <div class="separator"></div>
           <section class="contact-form">
             <h3 class="h3 form-title">Contact Form</h3>
 
-            <form action="#" class="form" data-form>
+            <form action="/contact" method="POST" class="form" data-form>
               <div class="input-wrapper">
                 <input
                   type="text"
