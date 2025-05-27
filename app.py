@@ -24,7 +24,8 @@ def index():
     experiences = data.get("experiencesData", [])
     challenges = data.get("challengesData", [])
     plans = data.get("plansData", [])
-    return render_template("index.html", families=families, hobbies=hobbies, personal=personal, skills=skills, projects=projects, schools=schools, experiences=experiences, challenges=challenges, plans=plans)
+    certificates = data.get("certificationData", [])
+    return render_template("index.html", families=families, hobbies=hobbies, personal=personal, skills=skills, projects=projects, schools=schools, experiences=experiences, challenges=challenges, plans=plans, certificates=certificates)
 
 @app.route("/contact", methods=["POST"])
 def contact():

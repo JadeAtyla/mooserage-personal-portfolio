@@ -219,9 +219,18 @@
   ],
   "certificationData": [
     {
-      "title": "Python for Everybody Specialization",
-      "issuer": "Coursera",
-      "date": "2023-10-01"
+      "img": "Certificate_of_Completion-PDRR.png",
+      "title": "Performing Data Recording and Reporting",
+      "issuer": "TESDA Online Program",
+      "date": "2024-06-05",
+      "description": "This credential indicates proficiency in the essential skills required for accurate data entry, organization, and generation of reports, vital for various administrative and technical roles."
+    },
+    {
+      "img": "Certificate_of_Completion-CSS.png",
+      "title": "Introduction to CSS",
+      "issuer": "TESDA Online Program",
+      "date": "2025-05-27",
+      "description": "This certification demonstrates foundational knowledge in Computer Systems Servicing (CSS), covering basic concepts and practices relevant to maintaining and troubleshooting computer systems."
     }
   ],
   "schoolsData": [
@@ -265,59 +274,39 @@
       "position": "Visual Graphics",
       "startYear": "June 2024",
       "endYear": "July 2024",
-      "description": "Created visual graphics from client requests, including logos, and poster. Utilized tools like Figma to deliver high-quality designs."
+      "description": "Created visual graphics from client requests, including logos, and poster."
     }
   ],
   "challengesData": [
     {
-      "date": "15 Dec",
-      "title": "Problem",
-      "category": "Challenge",
-      "description": "Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem"
+      "date": "2025",
+      "title": "Enrollment System Issue",
+      "challenges": "Our team encountered deployment issue that led the team to have bad grades. This is because we have lack of knowledge about the deployment process and what bugs we could encounter",
+      "learnings": "I researched and also led myself to experience different bugs for the deployment for me to find the answer in each problem. I use this technique to train myself about error handling and the right way of deployment."
     },
     {
-      "date": "15 Dec",
-      "title": "Problem",
-      "category": "Challenge",
-      "description": "Problem"
+      "date": "2024",
+      "title": "Lack of Technical Groupmates",
+      "challenges": "I have experience to code alone admist of my background (I am STEM Studdent, coding haven't taught in my SHS years), this is due to lack of equipments of my groupmates.",
+      "learnings": "Coding alone is hard, but experiencing various errors could guide you to knowledge. I've adjusted my pace on learning and multitask for frontend, backend, and database."
     },
     {
-      "date": "15 Dec",
-      "title": "Problem",
-      "category": "Challenge",
-      "description": "Problem"
-    },
-    {
-      "date": "15 Dec",
-      "title": "Problem",
-      "category": "Challenge",
-      "description": "Problem"
+      "date": "2023",
+      "title": "Lack of Knowledge about TechStacks",
+      "challenges": "We've created an e-commerce about a construction services. Due to lack or knowledge in techstacks and also shortage of resources, our system isn't finished when we submitted it.",
+      "learnings": "We search on tools, libraries, frameworks, and other more ready to use resources to ease the time consumption on building each part in our systems."
     }
   ],
   "plansData": [
     {
-      "date": "15 Dec 2022",
-      "title": "Plans",
-      "category": "Long Term Plan",
-      "description": "Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem"
+      "image": "cybersecurity.png",
+      "title": "Long Term Goals",
+      "description": "Looking beyond graduation, my long-term aspirations are centered on establishing a robust career in tech and specializing in cybersecurity. The primary goal is to successfully finish college and secure a challenging entry-level position that allows me to make experience in the corporate world. This will involve continuous learning, seeking mentorship within my workplace, and consistently performing well to take on new responsibilities. As I gain more professional experience, I'll actively refactor my portfolios with a strong base of experience, showcasing contributions to real-world projects, writing technical blogs, and potentially contributing to open-source initiatives. My ultimate specialization lies in cybersecurity; therefore, I plan to learn and apply to cybersecurity by pursuing to this industry, engaging in hands-on labs and CTFs, and networking within the cybersecurity community to eventually transition into a specialized role in the field."
     },
     {
-      "date": "15 Dec 2022",
-      "title": "Plans",
-      "category": "Long Term Plan",
-      "description": "Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem"
-    },
-    {
-      "date": "15 Dec 2022",
-      "title": "Plans",
-      "category": "Long Term Plan",
-      "description": "Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem"
-    },
-    {
-      "date": "15 Dec 2022",
-      "title": "Plans",
-      "category": "Long Term Plan",
-      "description": "Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem Problem"
+      "image": "coding.png",
+      "title": "Short Term Goals",
+      "description": "My short-term priorities are doing well in school and actively laying the groundwork for my future career.  I'll make restructuring and correcting errors in earlier systems a priority this semester by setting aside a certain amount of time to go over previous projects and improve their documentation, efficiency, and code quality while maintaining appropriate version control on sites like GitHub.  At the same time, I want to graduate from college with honors, keeping up solid grades, and working hard to get ready for the capstone project and future classes.  Even before my official internship begins, I will actively look for ways to obtain experience in the corporate world.  This entails going to online career fairs, connecting with industry experts on LinkedIn, and looking into volunteer or freelance coding projects to put my abilities to use. At the same time, I'll start to restructure my portfolio by adding these enhanced academic assignments and any fresh experiences, emphasizing clear explanations, clean code, and a solid foundation of proven abilities."
     }
   ]
 }

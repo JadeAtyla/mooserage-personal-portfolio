@@ -131,6 +131,7 @@ button {
   cursor: pointer;
 }
 
+
 input,
 textarea {
   display: block;
@@ -205,7 +206,7 @@ article {
   --ionicon-stroke-width: 35px;
 }
 
-.icon { 
+.icon {
   color: var(--orange-yellow-crayola);
 }
 
@@ -343,6 +344,7 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .info-content .name {
@@ -1338,6 +1340,32 @@ textarea.form-input::-webkit-resizer {
   background: var(--bg-gradient-jet);
 }
 
+.burger-menu-btn {
+  position: fixed; /* Keep it in place */
+  top: 15px; /* Adjust as needed for spacing */
+  right: 15px; /* Position on the right side */
+  /* background: var(--eerie-black-2);
+  color: var(--orange-yellow-crayola); */
+  z-index: 10; /* Ensure it's on top of other content */
+  /* font-size: 24px; */
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+.burger-menu-btn .line {
+  width: 30px; /* Width of each line */
+  height: 3px; /* Thickness of each line */
+  background-color: var(--orange-yellow-crayola); /* Color of the lines */
+  display: block;
+  margin: 6px auto; /* Space between lines */
+  transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+}
+
+.resume-img {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -1445,7 +1473,6 @@ textarea.form-input::-webkit-resizer {
 
   .avatar-box {
     border-radius: 30px;
-    overflow: hidden;
   }
 
   .avatar-box img {
@@ -1704,6 +1731,7 @@ textarea.form-input::-webkit-resizer {
   .sidebar,
   article {
     width: 700px;
+    position: relative;
   }
 
   .has-scrollbar::-webkit-scrollbar-button {
@@ -1798,6 +1826,140 @@ textarea.form-input::-webkit-resizer {
   }
 }
 
+.navbar {
+  position: fixed; /* Fixed position for overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: hsla(240, 1%, 17%, 0.95); /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  border: none; /* Remove existing border */
+  border-radius: 0; /* Remove existing border-radius */
+  box-shadow: none; /* Remove existing shadow */
+  z-index: 9;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  transform: translateX(100%); /* Start off-screen to the right */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  visibility: hidden; /* Hidden by default */
+  opacity: 0; /* Hidden by default */
+}
+
+/* When the navbar is active (open) */
+.navbar.active {
+  transform: translateX(0); /* Slide into view */
+  visibility: visible;
+  opacity: 1;
+  height: 100%; /* Full height when open */
+}
+
+.navbar-list {
+  flex-direction: column; /* Ensure vertical stacking */
+  gap: 20px; /* Space out links vertically */
+  padding: 0; /* Remove padding from list */
+}
+
+.navbar-link {
+  padding: 15px 20px; /* Adjust padding for better touch targets */
+  width: 100%; /* Make links take full width */
+  text-align: center;
+  font-size: var(--fs-4); /* Adjust font size for better readability */
+}
+
+/* Media query for smaller screens (e.g., less than 1024px) */
+@media (max-width: 1023px) {
+  .sidebar {
+    margin-top: 0; /* Remove the margin that pushed it down */
+  }
+
+  .navbar {
+    top: 0; /* Ensure navbar is at the top when active */
+    left: 0;
+    width: 100%;
+  }
+
+  .burger-menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: scale(1.1); */
+  }
+
+  .burger-menu-btn ion-icon {
+    transform: scale(1.5);
+  }
+
+  /* Hide the default navbar appearance */
+  .navbar-list {
+    display: flex; /* Keep flex display for column stacking */
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+
+  /* Make the sidebar appear below the fixed navbar */
+  main {
+    margin-top: 70px; /* Adjust this based on your fixed navbar height */
+  }
+
+  /* The existing .navbar styles within this media query can be removed or adjusted */
+  /* if they conflict with the new fixed, off-screen navbar. */
+  .navbar {
+    /* This is the conflicting block from your original CSS, consider removing it */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: hsla(240, 1%, 17%, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--jet);
+    border-radius: 12px 12px 0 0;
+    box-shadow: var(--shadow-2);
+    z-index: 5;
+  }
+}
+
+/* Media query for larger screens (e.g., 1024px and up) */
+@media (min-width: 1024px) {
+  /* Hide the burger menu button */
+  .burger-menu-btn {
+    display: none;
+  }
+
+  /* Restore the original navbar styles for larger screens */
+  .navbar {
+    position: absolute; /* Revert to absolute positioning */
+    bottom: auto;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: max-content;
+    border-radius: 0 20px;
+    padding: 0 20px;
+    box-shadow: none;
+    display: block; /* Show the navbar */
+    transform: translateX(0); /* Ensure it's always visible */
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar-list {
+    display: flex; /* Revert to horizontal display */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    gap: 30px; /* Adjust gap as needed */
+  }
+
+  .navbar-link {
+    padding: 20px 7px;
+    width: auto;
+    font-size: var(--fs-8);
+    text-align: left;
+  }
+}
+
 /**
  * responsive larger than 1024px screen
  */
@@ -1806,7 +1968,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * CUSTOM PROPERTY
    */
-
   :root {
     /**
     * shadow
@@ -1822,7 +1983,8 @@ textarea.form-input::-webkit-resizer {
    */
 
   .sidebar,
-  article {
+  article,
+  .resume-section {
     width: 950px;
     box-shadow: var(--shadow-5);
   }
@@ -1907,9 +2069,6 @@ textarea.form-input::-webkit-resizer {
 }
 
 @media (max-width: 1023px) {
-  .sidebar {
-    margin-top: 100px;
-  }
   .article-title {
     padding-top: 0;
   }
@@ -2085,7 +2244,6 @@ textarea.form-input::-webkit-resizer {
 .body {
   margin: 0;
   background: transparent;
-
 }
 
 .timeline2 {
@@ -2101,7 +2259,7 @@ textarea.form-input::-webkit-resizer {
 }
 
 .timeline2::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 4px;
   background: var(--orange-yellow-crayola);
@@ -2130,7 +2288,7 @@ textarea.form-input::-webkit-resizer {
 }
 
 .container::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 18px;
   height: 18px;
@@ -2143,7 +2301,7 @@ textarea.form-input::-webkit-resizer {
   box-shadow: 0 0 0 4px var(--eerie-black-2);
 }
 
-.container.left::after{
+.container.left::after {
   transition: transform 0.5s;
 }
 
@@ -2153,12 +2311,13 @@ textarea.form-input::-webkit-resizer {
   transition: transform 0.5s;
 }
 
-.container.left:hover::after, .container.right:hover::after{
+.container.left:hover::after,
+.container.right:hover::after {
   transform: scale(1.5);
 }
 
 .container::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 50px;
   height: 4px;
@@ -2257,6 +2416,9 @@ textarea.form-input::-webkit-resizer {
 @media (max-width: 900px) {
   .timeline {
     padding: 20px 0;
+  }
+  .timeline2::after {
+    display: none;
   }
   .container {
     width: 100%;

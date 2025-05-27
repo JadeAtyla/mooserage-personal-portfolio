@@ -188,4 +188,35 @@ document.addEventListener("DOMContentLoaded", function () {
     var options = { year: "numeric", month: "long", day: "numeric" };
     modalDate.textContent = now.toLocaleDateString("en-US", options);
   }
+// For burger menu
+const burgerMenuBtn = document.querySelector("[data-burger-menu-btn]");
+const navbar = document.querySelector(".navbar");
+const navLinks = document.querySelectorAll("[data-nav-link]");
+const icon = burgerMenuBtn?.querySelector("ion-icon");
+
+function toggleNavbar(active) {
+  if (active) {
+    navbar.classList.add("active");
+    icon?.setAttribute("name", "close-sharp");
+  } else {
+    navbar.classList.remove("active");
+    icon?.setAttribute("name", "menu-outline");
+  }
+}
+
+if (burgerMenuBtn && navbar) {
+  burgerMenuBtn.addEventListener("click", () => {
+    const isActive = !navbar.classList.contains("active");
+    toggleNavbar(isActive);
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (navbar.classList.contains("active")) {
+        toggleNavbar(false);
+      }
+    });
+  });
+}
+
 });
