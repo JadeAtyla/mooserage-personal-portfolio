@@ -74,7 +74,7 @@
     {
       "icon": "pizza-outline",
       "category": "Address",
-      "data": "082 Genai Latero San Nicolas 3 Bacoor Cavite"
+      "data": "Bacoor, Cavite, Philippines"
     },
     {
       "icon": "bookmarks-outline",
@@ -236,16 +236,11 @@
   ],
   "schoolsData": [
     {
-      "name": "Moonwalk Elementary School",
-      "level": "Elementary",
-      "startYear": "2010",
-      "endYear": "2016"
-    },
-    {
-      "name": "City of Bacoor National High School",
-      "level": "Junior High School",
-      "startYear": "2016",
-      "endYear": "2020"
+      "name": "Cavite State University - Bacoor Campus",
+      "specification": "Bachelor of Science in Computer Science",
+      "level": "College",
+      "startYear": "2022",
+      "endYear": "2026"
     },
     {
       "name": "Southeast Asia Institute of Trade and Technology",
@@ -255,27 +250,32 @@
       "endYear": "2022"
     },
     {
-      "name": "Cavite State University - Bacoor Campus",
-      "specification": "Bachelor of Science in Computer Science",
-      "level": "College",
-      "startYear": "2022",
-      "endYear": "2026"
+      "name": "City of Bacoor National High School",
+      "level": "Junior High School",
+      "startYear": "2016",
+      "endYear": "2020"
+    },
+    {
+      "name": "Moonwalk Elementary School",
+      "level": "Elementary",
+      "startYear": "2010",
+      "endYear": "2016"
     }
   ],
   "experiencesData": [
-    {
-      "company": "Fortuner Sercurity Agency Inc.",
-      "position": "On-call Laiason",
-      "startYear": "November 2022",
-      "endYear": "January 2023",
-      "description": "Assisted in various tasks such as collection of documents and filing of reports."
-    },
     {
       "company": "Freelance",
       "position": "Visual Graphics",
       "startYear": "June 2024",
       "endYear": "July 2024",
       "description": "Created visual graphics from client requests, including logos, and poster."
+    },
+    {
+      "company": "Fortuner Sercurity Agency Inc.",
+      "position": "On-call Laiason",
+      "startYear": "November 2022",
+      "endYear": "January 2023",
+      "description": "Assisted in various tasks such as collection of documents and filing of reports."
     }
   ],
   "challengesData": [
