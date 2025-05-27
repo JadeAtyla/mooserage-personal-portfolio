@@ -1,0 +1,82 @@
+{% extends "base.html" %} {% block title %}Mooserage Portfolio | Skills{%
+endblock %} {% block content %}
+<article class="skills" data-page="skills">
+  <header>
+    <h2 class="h2 article-title">Skills</h2>
+  </header>
+  {% for skill in skills %}
+  <section class="timeline">
+    <div class="title-wrapper">
+      <div class="icon-box">
+        <ion-icon name="{{ skill.icon }}"></ion-icon>
+      </div>
+
+      <h3 class="h3">{{ skill.title }}</h3>
+    </div>
+
+    <ol class="timeline-list">
+      {% for s in skill.skills %}
+      <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">{{ s.data }}</h4>
+
+        <p class="timeline-text">{{ s.desc }}</p>
+        {% if s.skillsStack %}
+        <div class="contact-social-row">
+          {% for stack in s.skillsStack %}
+          <div class="icon-box">
+            <img
+              src="{{ url_for('static', filename='images/' + stack|lower + '.svg') }}"
+              alt="{{ stack }} Icon"
+              width="30"
+              class="{{ 'svg-black-to-white' if stack in skill.blackedIcon else '' }}"
+            />
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  <div class="separator"></div>
+  {% endfor %}
+  <div class="seperator"></div>
+  <h3 class="h3 skills-title">Certificates</h3>
+  <section class="blog-posts">
+    <ul class="blog-posts-list">
+      {% for cert in certificates %}
+      <li class="blog-post-item">
+        <a>
+          <figure class="blog-banner-box">
+            <img
+              src="{{ url_for('static', filename='images/' + cert.img ) }}"
+              alt="Design conferences in 2022"
+              loading="lazy"
+            />
+          </figure>
+
+          <div class="blog-content">
+            <div class="blog-meta">
+              <p class="blog-category">{{cert.issuer}}</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2022-02-23">{{cert.date }}</time>
+            </div>
+
+            <h3 class="h3 blog-item-title">
+              {{cert.title}}
+            </h3>
+
+            <p class="blog-text">
+              {{cert.description}}
+            </p>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <div class="separator"></div>
+</article>
+{% endblock %}

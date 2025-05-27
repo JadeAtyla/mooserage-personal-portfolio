@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Mooserage Portfolio | Plans{% endblock %}
+
+{% block content %}
+<article class="plans" data-page="plans">
+  <header>
+    <h2 class="h2 article-title">Plans</h2>
+  </header>
+
+  <section class="blog-posts">
+    <ul class="blog-posts-list">
+      {% for plan in plans %}
+      <li class="blog-post-item">
+        <a href="#">
+          <figure class="blog-banner-box">
+            <img
+              src="{{ url_for('static', filename='images/' + plan.image ) }}"
+              alt="Design conferences in 2022"
+              loading="lazy"
+            />
+          </figure>
+
+          <div class="blog-content">
+            <div class="blog-meta">
+              <p class="blog-category">Goals & Plan</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2022-02-23">2022-02-23</time> {# You might want to use {{ plan.date }} if your data includes a date #}
+            </div>
+
+            <h3 class="h3 blog-item-title">{{plan.title}}</h3>
+
+            <p class="blog-text indent">{{plan.description}}</p>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</article>
+{% endblock %}

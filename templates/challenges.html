@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Mooserage Portfolio | Challenges{% endblock %}
+
+{% block content %}
+<article class="challenges" data-page="challenges">
+  <header>
+    <h2 class="h2 article-title">Challenges & Learnings</h2>
+  </header>
+  <div class="timeline2">
+    <div class="body">
+      {% for i in range(challenges|length) %}
+      <div
+        class="container {% if loop.index0 % 2 == 0 %}left{% else %}right{% endif %}"
+      >
+        <div class="date">{{challenges[i].date}}</div>
+        <i class="icon fa fa-home"></i> {# This icon might need to be verified or replaced if not Font Awesome #}
+        <div class="content" title="{{ challenges[i].title }}">
+          <h2>Challenges</h2>
+          <p class="indent desc">{{challenges[i].challenges}}</p>
+          <h2>Learnings</h2>
+          <p class="indent desc">{{challenges[i].learnings}}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</article>
+{% endblock %}

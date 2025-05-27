@@ -131,7 +131,6 @@ button {
   cursor: pointer;
 }
 
-
 input,
 textarea {
   display: block;
@@ -210,7 +209,7 @@ article {
   color: var(--orange-yellow-crayola);
 }
 
-article {
+/* article {
   display: none;
 }
 
@@ -226,7 +225,7 @@ article.active {
   100% {
     opacity: 1;
   }
-}
+} */
 
 .h2,
 .h3,
@@ -1366,6 +1365,25 @@ textarea.form-input::-webkit-resizer {
   margin-bottom: 5%;
 }
 
+.svg-black-to-white {
+  filter: invert(100%) sepia(100%) saturate(0%) brightness(200%) contrast(100%);
+}
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+footer {
+  background: transparent;
+  color: var(--light-gray);
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 0;
+  font-size: var(--fs-7);
+  border-radius: 20px; /* If main-content has rounded bottom, make footer rounded too, or set to 0 for flush */
+  /* Or simply remove border-radius entirely if you want it to be flat */
+}
+
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -2086,6 +2104,12 @@ textarea.form-input::-webkit-resizer {
   body::-webkit-scrollbar {
     width: 20px;
   }
+
+  footer {
+    border-radius: 0; /* Remove border-radius on larger screens if main content is full width */
+    margin-top: 0;
+  }
+
 
   body::-webkit-scrollbar-track {
     background: var(--smoky-black);

@@ -129,6 +129,7 @@
     {
       "title": "Technical Skills",
       "icon": "settings-outline",
+      "blackedIcon": ["Flask", "ExpressJS", "Inkscape", "CapCut", "Vercel", "Railway"],
       "skills": [
         {
           "data": "Programming",

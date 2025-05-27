@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Mooserage Portfolio | Resume{% endblock %}
+
+{% block content %}
+<article class="resume" data-page="resume">
+  <header>
+    <h2 class="h2 article-title">Resume</h2>
+  </header>
+
+  <section class="timeline">
+    <div class="title-wrapper">
+      <div class="icon-box">
+        <ion-icon name="book-outline"></ion-icon>
+      </div>
+
+      <h3 class="h3">Education</h3>
+    </div>
+
+    <ol class="timeline-list">
+      {% for school in schools %}
+      <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">{{ school.name }}</h4>
+
+        <span>{{ school.startYear }} — {{ school.endYear }}</span>
+
+        <p class="timeline-text">
+          <em>{{ school.level }}</em><br />
+          {{ school.specification }}
+        </p>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section class="timeline">
+    <div class="title-wrapper">
+      <div class="icon-box">
+        <ion-icon name="book-outline"></ion-icon>
+      </div>
+
+      <h3 class="h3">Experience</h3>
+    </div>
+
+    <ol class="timeline-list">
+      {% for experience in experiences %}
+      <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">
+          {{ experience.position }}
+        </h4>
+
+        <span>{{ experience.startYear }} — {{ experience.endYear }}</span>
+
+        <p class="timeline-text">
+          <em>{{ experience.company }}</em><br />
+          {{ experience.description }}
+        </p>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  <div class="sidebar-info">
+    <img
+      src="{{url_for('static', filename='images/Jade Atyla Madigal - Resume.png')}}"
+      class="resume-img"
+      alt="Jade Atyla Madigal Resume"
+    >
+  </div>
+  <section class="skill">
+    <button class="form-btn" onclick="downloadResume()">
+      <ion-icon name="paper-plane"></ion-icon>
+      <span>Download Resume</span>
+    </button>
+  </section>
+</article>
+{% endblock %}

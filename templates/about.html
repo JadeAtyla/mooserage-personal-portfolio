@@ -1,0 +1,144 @@
+{% extends "base.html" %} {% block title %}Mooserage Portfolio | About{%
+endblock %} {% block content %}
+<article class="about active" data-page="about">
+  <header>
+    <h2 class="h2 article-title">About me</h2>
+  </header>
+
+  <section class="about-text">
+    <p class="indent">
+      Hi! I’m a 3rd-year BS Computer Science student who is passionate about
+      learning through practical experience. I believe that building projects is
+      the best way to gain real-world skills and deepen my understanding of
+      programming concepts.
+    </p>
+    <p class="indent">
+      I have experience coding in Java, JavaScript, HTML, CSS, PHP, and Python,
+      and I enjoy working with frameworks and libraries like Django, Flask,
+      React.js, and Node.js. I’m also familiar with managing databases such as
+      SQLite3, MySQL, MongoDB, and MariaDB.
+    </p>
+
+    <p class="indent">
+      Aside from coding, I’m interested in exploring different technologies and
+      improving my problem-solving abilities. I’m always eager to take on new
+      challenges and collaborate on projects that push me to grow as a
+      developer. My goal is to continuously expand my knowledge and apply what
+      I learn to create meaningful and efficient software solutions.
+    </p>
+  </section>
+  <div class="separator"></div>
+  <h3 class="h3 personal-info-title">My Information</h3>
+  <ul class="contacts-list">
+    {% for me in personal %}
+    <li class="contact-item">
+      <div class="icon-box">
+        <ion-icon name="{{ me.icon }}"></ion-icon>
+      </div>
+
+      <div class="contact-info">
+        <p class="contact-title">{{ me.category }}</p>
+
+        <p class="contact-link">{{ me.data }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="separator"></div>
+
+  <section class="service">
+    <h3 class="h3 service-title">What i'm doing</h3>
+
+    <ul class="service-list">
+      {% for hobby in hobbies %}
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img
+            src="{{ hobby.icon }}"
+            alt="{{ hobby.title }} Icon"
+            width="40"
+          />
+        </div>
+
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">{{ hobby.title }}</h4>
+
+          <p class="service-item-text">{{ hobby.text }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <div class="separator"></div>
+  <section class="testimonials">
+    <h3 class="h3 testimonials-title">Family Background</h3>
+
+    <ul class="testimonials-list has-scrollbar">
+      {% for family in families %}
+      <li class="testimonials-item">
+        <div class="content-card" data-testimonials-item>
+          <figure class="testimonials-avatar-box">
+            <img
+              src="{{ family.avatar }}"
+              alt="{{ family.name }}"
+              width="60"
+              data-testimonials-avatar
+            />
+          </figure>
+          <h4 class="h4 testimonials-item-title" data-testimonials-title>
+            {{ family.name }}
+          </h4>
+          <p data-testimonials-relationship hidden>
+            {{ family.relationship }}
+          </p>
+          <div class="testimonials-text" data-testimonials-text>
+            <p>{{ family.text }}</p>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <div class="modal-container" data-modal-container>
+    <div class="overlay" data-overlay></div>
+
+    <section class="testimonials-modal">
+      <button class="modal-close-btn" data-modal-close-btn>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="modal-img-wrapper">
+        <figure class="modal-avatar-box">
+          <img
+            src="{{ url_for('static', filename='images/avatar-1.png') }}"
+            alt="Daniel lewis"
+            width="80"
+            data-modal-img
+          />
+        </figure>
+
+        <img
+          src="{{ url_for('static', filename='images/icon-quote.svg') }}"
+          alt="quote icon"
+        />
+      </div>
+
+      <div class="modal-content">
+        <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+        <time class="modal-date"></time>
+        <div class="info-content">
+          <p class="enclosed" data-modal-relationship>
+            </p>
+        </div>
+
+        <div data-modal-text>
+          <p>
+            </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</article>
+{% endblock %}

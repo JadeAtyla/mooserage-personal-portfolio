@@ -1,0 +1,98 @@
+{% extends "base.html" %} {% block title %}Mooserage Portfolio | Projects{%
+endblock %} {% block content %}
+<article class="portfolio" data-page="projects">
+  <header>
+    <h2 class="h2 article-title">Projects</h2>
+  </header>
+
+  <section class="projects">
+    <ul class="filter-list">
+      <li class="filter-item">
+        <button class="active" data-filter-btn>All</button>
+      </li>
+
+      <li class="filter-item">
+        <button data-filter-btn>Websites</button>
+      </li>
+
+      <li class="filter-item">
+        <button data-filter-btn>Applications</button>
+      </li>
+
+      <li class="filter-item">
+        <button data-filter-btn>Web Application</button>
+      </li>
+    </ul>
+
+    <div class="filter-select-box">
+      <button class="filter-select" data-select>
+        <div class="select-value" data-select-value>Select category</div>
+
+        <div class="select-icon">
+          <ion-icon name="chevron-down"></ion-icon>
+        </div>
+      </button>
+
+      <ul class="select-list">
+        <li class="select-item">
+          <button data-select-item>All</button>
+        </li>
+
+        <li class="select-item">
+          <button data-select-item>Websites</button>
+        </li>
+
+        <li class="select-item">
+          <button data-select-item>Applications</button>
+        </li>
+
+        <li class="select-item">
+          <button data-select-item>Web Application</button>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="project-list">
+      {% for project in projects %}
+      <li
+        class="project-item active"
+        data-filter-item
+        data-category="{{ project.category }}"
+      >
+        <a href="#">
+          <figure class="project-img">
+            <div class="project-row">
+              <div class="project-item-icon-box">
+                {% if project.liveDemo %}
+                <ion-icon
+                  class="link-icon"
+                  name="play-circle-outline"
+                  onclick="window.open('{{ project.liveDemo }}', '_blank')"
+                ></ion-icon>
+                {% endif %} {% if project.github %}
+                <ion-icon
+                  class="link-icon"
+                  name="logo-github"
+                  onclick="window.open('{{ project.githubLink }}', '_blank')"
+                ></ion-icon>
+                {% endif %}
+              </div>
+            </div>
+
+            <img
+              src="{{ url_for('static', filename='images/' + project.image) }}"
+              alt="{{ project.title }}"
+              loading="lazy"
+            />
+          </figure>
+
+          <h3 class="project-title">{{ project.title }}</h3>
+
+          <p class="project-category">{{ project.category }}</p>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</article>
+{% endblock %}

@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Mooserage Portfolio | Contact{% endblock %}
+
+{% block content %}
+<article class="contact" data-page="contact">
+  <header>
+    <h2 class="h2 article-title">Contact</h2>
+  </header>
+
+  <section class="mapbox" data-mapbox>
+    <figure>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15456.963162791694!2d120.93288118041531!3d14.437142079089774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d3910c73240d%3A0xc47e30d1e57c6b41!2sBacoor%2C%20Cavite!5e0!3m2!1sen!2sph!4v1716823377797!5m2!1sen!2sph"
+        width="400"
+        height="300"
+        loading="lazy"
+      ></iframe>
+    </figure>
+  </section>
+  <div class="separator"></div> {# Add this separator if you want it between map and social links #}
+  <h3 class="h3 form-title">Social Links</h3>
+  <div class="contact-social-row">
+    <a
+      class="icon-box"
+      title="Facebook"
+      href="https://www.facebook.com/jadeatylam"
+      target="_blank"
+    >
+      <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+    <a
+      class="icon-box"
+      title="Telegram"
+      href="https://t.me/jamadigal"
+      target="_blank"
+    >
+      <ion-icon name="paper-plane"></ion-icon>
+    </a>
+    <a
+      class="icon-box"
+      title="Instagram"
+      href="https://www.instagram.com/jeydweirdough/"
+      target="_blank"
+    >
+      <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+    <a
+      class="icon-box"
+      title="LinkedIn"
+      href="https://www.linkedin.com/in/madigal-jade-atyla-l-14803835a/"
+      target="_blank"
+    >
+      <ion-icon name="logo-linkedIn"></ion-icon>
+    </a>
+    <a
+      class="icon-box"
+      title="Github"
+      href="https://github.com/JadeAtyla"
+      target="_blank"
+    >
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+    <a
+      class="icon-box"
+      title="Discord"
+      href="https://discord.com/users/1118727103228149770"
+      target="_blank"
+    >
+      <ion-icon name="logo-discord"></ion-icon>
+    </a>
+    <a
+      class="icon-box"
+      title="Atyla Personal Portfolio"
+      href="https://atyla-personal-portfolio.vercel.app/"
+      target="_blank"
+    >
+      <ion-icon name="browsers-outline"></ion-icon>
+    </a>
+  </div>
+  <div class="separator"></div>
+  <section class="contact-form">
+    <h3 class="h3 form-title">Contact Form</h3>
+
+    <form action="{{ url_for('contact') }}" method="POST" class="form" data-form>
+      <div class="input-wrapper">
+        <input
+          type="text"
+          name="fullname"
+          class="form-input"
+          placeholder="Full name"
+          required
+          data-form-input
+        />
+
+        <input
+          type="email"
+          name="email"
+          class="form-input"
+          placeholder="Email address"
+          required
+          data-form-input
+        />
+      </div>
+
+      <textarea
+        name="message"
+        class="form-input"
+        placeholder="Your Message"
+        required
+        data-form-input
+      ></textarea>
+
+      <button class="form-btn" type="submit" disabled data-form-btn>
+        <ion-icon name="paper-plane"></ion-icon>
+        <span>Send Message</span>
+      </button>
+    </form>
+  </section>
+</article>
+{% endblock %}
