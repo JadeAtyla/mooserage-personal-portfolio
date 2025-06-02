@@ -129,7 +129,14 @@
     {
       "title": "Technical Skills",
       "icon": "settings-outline",
-      "blackedIcon": ["Flask", "ExpressJS", "Inkscape", "CapCut", "Vercel", "Railway"],
+      "blackedIcon": [
+        "Flask",
+        "ExpressJS",
+        "Inkscape",
+        "CapCut",
+        "Vercel",
+        "Railway"
+      ],
       "skills": [
         {
           "data": "Programming",
@@ -186,7 +193,8 @@
       "category": "Web Application",
       "techstack": ["Flask", "HTML", "Bootstrap", "JavaScript", "SQLite3"],
       "liveDemo": "https://to-do-list-system.vercel.app/",
-      "github": "https://github.com/JadeAtyla/To-Do-List-System"
+      "github": "https://github.com/JadeAtyla/To-Do-List-System",
+      "description": "A responsive web application designed to help users manage their daily tasks efficiently."
     },
     {
       "image": "enrollment_system_img.jpg",
@@ -194,28 +202,31 @@
       "category": "Web Application",
       "techstack": [
         "Django",
-        "React.js",
-        "TailwindCSS",
+        "Reactjs",
+        "Tailwind",
         "Python",
         "JavaScript",
         "MySQL"
       ],
-      "github": "https://github.com/JadeAtyla/Enrollment-System"
+      "github": "https://github.com/JadeAtyla/Enrollment-System",
+      "description": "A comprehensive web-based enrollment system facilitating student registration and course management."
     },
     {
       "image": "checklist_img.jpg",
       "title": "Checklist",
       "category": "Web Application",
-      "techstack": ["Django", "TailwindCSS", "HTML", "Python", "JavaScript"],
-      "github": "https://github.com/JadeAtyla/Checklist"
+      "techstack": ["Django", "Tailwind", "HTML", "Python", "JavaScript"],
+      "github": "https://github.com/JadeAtyla/Checklist",
+      "description": "A simple yet effective web application for creating and managing grades for each year and semester."
     },
     {
       "image": "jecati_img.jpg",
       "title": "Jecati Construction Services",
       "category": "Websites",
-      "techstack": ["Django", "TailwindCSS", "HTML", "Python", "JavaScript"],
+      "techstack": ["Django", "Tailwind", "HTML", "Python", "JavaScript"],
       "liveDemo": "https://jecati-construction-services.vercel.app/",
-      "github": "https://github.com/JadeAtyla/JecatiConstructionServices"
+      "github": "https://github.com/JadeAtyla/JecatiConstructionServices",
+      "description": "A professional website for Jecati Construction Services, showcasing their offerings and portfolio."
     }
   ],
   "certificationData": [

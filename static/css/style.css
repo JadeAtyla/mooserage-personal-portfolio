@@ -474,6 +474,13 @@ main {
   margin-bottom: 10px;
 }
 
+.techstack {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-left: 12px;
+}
+
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
@@ -1118,6 +1125,44 @@ main {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
+}
+
+/* Initial state: The description is hidden by default */
+.project-item .project-description {
+  opacity: 0; /* Start completely transparent */
+  max-height: 0; /* Start with no height, effectively hidden */
+  overflow: hidden; /* Hide any overflowing text during transition */
+  padding-top: 0; /* Ensure no padding is visible when hidden */
+  padding-bottom: 0; /* Ensure no padding is visible when hidden */
+  
+  /* Apply transitions for a smooth effect */
+  transition: opacity 0.4s ease-out, max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.project-item:hover .project-description {
+  opacity: 1;
+  max-height: 150px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.project-item figure.project-img .project-row {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-item:hover figure.project-img .project-row {
+  opacity: 1;
+}
+
+
+.project-item figure.project-img::before { 
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-item:hover figure.project-img::before {
+  opacity: 1;
 }
 
 /*-----------------------------------*\

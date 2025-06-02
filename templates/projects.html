@@ -77,11 +77,26 @@ endblock %} {% block content %}
               loading="lazy"
             />
           </figure>
-
-          <h3 class="project-title">{{ project.title }}</h3>
-
           <p class="project-category">{{ project.category }}</p>
+          <h3 class="project-title">{{ project.title | upper }}</h3>
+
+          {% if project.techstack %}
+          <div class="project-description techstack">
+            {% for proj in project.techstack %}
+            <div>
+              <img
+                src="{{ url_for('static', filename='images/' + proj|lower + '.svg') }}"
+                alt="{{ stack }} Icon"
+                width="30"
+              />
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
         </a>
+        <p class="project-category project-description">
+          {{ project.description }}
+        </p>
       </li>
       {% endfor %}
     </ul>
